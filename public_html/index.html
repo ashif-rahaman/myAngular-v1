@@ -20,9 +20,33 @@ and open the template in the editor.
 
     <!--body starts-->
     <body>
-        <div ng-controller="SimpleController">
-            <img ng-src="{{ image.url}}">
+        <!--        <div ng-controller="SimpleController">
+                    <input ng-model="message" type="text" name="message" value="" />
 
+                    <input  ng-click="addButton(message)" type="button" value="Go"/>
+
+                    <div ng-repeat="employee in employees">
+                        <input type="button" value="{{employee.name}}"/>
+                    </div>
+                </div>-->
+        <div ng-controller="buttonAction">
+            <input type="text" ng-model="buttonName"/><br/>
+            <input type="button" ng-click="activate();" value="Activate"/><br/>
+            <button ng-show="isActive">{{ buttonName}}</button>
+        </div>
+        <hr/>
+        <div ng-controller="addingNamesController">
+            <form>
+                <input type="text" ng-model="name" />
+                <input type="number" min="10" ng-model="age" />
+                <br/><input type="button" value="Add" ng-click="if (age > 9) {
+                                addName();
+                            }"/>
+            </form>
+            <br/>
+            <ul>
+                <li ng-repeat="user in users" >Name: {{ user.name}}, Age: {{ user.age}}</li>
+            </ul>
         </div>
     </body>
 </html>
