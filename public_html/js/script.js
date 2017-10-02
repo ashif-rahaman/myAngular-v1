@@ -6,4 +6,10 @@ var controller1 = function ($scope) {
 };
 
 
-module1.controller('myController', controller1);
+var controller2 = function ($scope) {
+
+    $scope.message = 'Hello Akash';
+};
+
+module1.controller('myController1', controller1);
+module1.controller('myController2', controller2);
