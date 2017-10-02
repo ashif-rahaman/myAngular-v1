@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="main">
+<html>
     <head>
         <title>TODO supply a title</title>
 
@@ -24,41 +24,11 @@
     </head>
 
     <!--body starts-->
-    <body class="w3-container">
-        <div class="w3-row">
-            <div class="w3-half w3-theme w3-centered">
-                <p class="w3-center w3-large">User List</p>
-            </div>
-            <div class="w3-half w3-centered">
-                <div class="w3-theme">
-                    <p class="w3-center w3-large">Add User</p>
-                </div>
-                <div>
-                    <table border="0" cellspacing="3" cellpadding="4">
-                        <tbody>
-                            <tr>
-                                <td>User Name : </td>
-                                <td>
-                                    <input type="text" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Phone : </td>
-                                <td>
-                                    <input type="text" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Gender : </td>
-                                <td>
-                                    <input type="text" />
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+    <body ng-app="myApplication">
 
-                </div>
-            </div>
+        <div ng-controller="myController">
+
+            {{message}}
         </div>
     </body>
 </html>
