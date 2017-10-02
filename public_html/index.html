@@ -1,52 +1,64 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html ng-app="main">
     <head>
         <title>TODO supply a title</title>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--jquery-->
+        <script src="js/jquery/jquery3.2.1.min.js" type="text/javascript"></script>
+
+        <!--bootstrap-->
+        <link href="style/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="style/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+
+        <!--w3.css-->
+        <link href="style/w3/w3.css" rel="stylesheet" type="text/css"/>
+        <link href="style/w3/w3-theme-blue.css" rel="stylesheet" type="text/css"/>
 
         <!--script link-up-->
         <script src="js/angular.min.js" type="text/javascript"></script>
         <script src="js/script.js" type="text/javascript"></script>
 
-        <!--extra-will be removed-->
-        <link rel="shortcut icon" href="">
     </head>
 
     <!--body starts-->
-    <body>
-        <!--        <div ng-controller="SimpleController">
-                    <input ng-model="message" type="text" name="message" value="" />
+    <body class="w3-container">
+        <div class="w3-row">
+            <div class="w3-half w3-theme w3-centered">
+                <p class="w3-center w3-large">User List</p>
+            </div>
+            <div class="w3-half w3-centered">
+                <div class="w3-theme">
+                    <p class="w3-center w3-large">Add User</p>
+                </div>
+                <div>
+                    <table border="0" cellspacing="3" cellpadding="4">
+                        <tbody>
+                            <tr>
+                                <td>User Name : </td>
+                                <td>
+                                    <input type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Phone : </td>
+                                <td>
+                                    <input type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gender : </td>
+                                <td>
+                                    <input type="text" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                    <input  ng-click="addButton(message)" type="button" value="Go"/>
-
-                    <div ng-repeat="employee in employees">
-                        <input type="button" value="{{employee.name}}"/>
-                    </div>
-                </div>-->
-        <div ng-controller="buttonAction">
-            <input type="text" ng-model="buttonName"/><br/>
-            <input type="button" ng-click="activate();" value="Activate"/><br/>
-            <button ng-show="isActive">{{ buttonName}}</button>
-        </div>
-        <hr/>
-        <div ng-controller="addingNamesController">
-            <form>
-                <input type="text" ng-model="name" />
-                <input type="number" min="10" ng-model="age" />
-                <br/><input type="button" value="Add" ng-click="if (age > 9) {
-                                addName();
-                            }"/>
-            </form>
-            <br/>
-            <ul>
-                <li ng-repeat="user in users" >Name: {{ user.name}}, Age: {{ user.age}}</li>
-            </ul>
+                </div>
+            </div>
         </div>
     </body>
 </html>
