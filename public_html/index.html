@@ -17,16 +17,13 @@
     </head>
 
     <!--body starts-->
-    <body ng-controller="myController">
+    <body>
 
-        <div>
-            Name: {{ country.name}}
+        <input type="text" ng-controller="myController1" ng-model="name"/>
+
+        <div ng-controller="myController2">
+            Name: {{ name}}
         </div>
-        <div>
-            Capital: {{ country.capital}}
-        </div>
-        <div>
-            <img ng-src="{{ country.flag}}" alt="Hill of Himalaya">
-        </div>
+
     </body>
 </html>

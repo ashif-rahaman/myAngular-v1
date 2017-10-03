@@ -3,17 +3,14 @@ var module1 = angular.module('myApplication', []);
 
 var controller1 = function ($scope) {
 
-    var testVarObj = {
+    $scope.name = 'Hamim';
+};
 
-        name: 'Bangladesh',
-        capital: 'Dhaka',
-        flag: 'images/hill.jpg'
-    };
+var controller2 = function ($scope) {
 
-    $scope.country = testVarObj;
-
-    $scope.mess = 'Hello';
+    $scope.name = '';
 };
 
 
-module1.controller('myController', controller1);
+module1.controller('myController1', controller1);
+module1.controller('myController2', controller2);
