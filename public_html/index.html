@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApplication">
     <head>
         <title>TODO supply a title</title>
 
@@ -17,15 +17,16 @@
     </head>
 
     <!--body starts-->
-    <body ng-app="myApplication">
+    <body ng-controller="myController">
 
-        <div ng-controller="myController1">
-
-            {{message}}
+        <div>
+            Name: {{ country.name}}
         </div>
-        <div ng-controller="myController2">
-
-            {{message}}
+        <div>
+            Capital: {{ country.capital}}
+        </div>
+        <div>
+            <img ng-src="{{ country.flag}}" alt="Hill of Himalaya">
         </div>
     </body>
 </html>
