@@ -17,13 +17,22 @@
     </head>
 
     <!--body starts-->
-    <body>
+    <body ng-controller="myController">
 
-        <input type="text" ng-controller="myController1" ng-model="name"/>
-
-        <div ng-controller="myController2">
-            Name: {{ name}}
-        </div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Cities</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="country in countries">
+                    <td>{{ country.name}}</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
 
     </body>
 </html>
