@@ -19,20 +19,10 @@
     <!--body starts-->
     <body ng-controller="myController">
 
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Country</th>
-                    <th>Cities</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="country in countries">
-                    <td>{{ country.name}}</td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-
+        <input type="text" name="country" id="inCountry">
+        <button ng-click="addCountry('inCountry')">Add</button>
+        <div ng-repeat="country in countries track by $index">
+            {{country}}
+        </div>
     </body>
 </html>

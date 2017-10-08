@@ -1,26 +1,37 @@
 var module1 = angular.module('myApplication', []);
 
+//var countries;
+
 
 var controller1 = function ($scope) {
 
-    var countries = [
+    $scope.countries = ['Bangladesh', 'India'];
 
-        {
-            name: 'Bangladesh',
-            cities: ['Dhaka', 'Chittagong', 'Khulna City', 'Rajshahi']
-        },
-        {
-            name: 'India',
-            cities: ['Kalkatta', 'Delhi', 'Bombay']
-        },
-        {
-            name: 'Pakistan',
-            cities: ['Islamabad', 'Shindhu']
+    $scope.addCountry = function (inputId) {
+
+        var newCountry = document.getElementById(inputId).value.trim();
+
+        document.getElementById(inputId).value = '';
+
+        var size = $scope.countries.length;
+
+        if (newCountry !== '' && $scope.countries.indexOf(newCountry) === -1) {
+
+            $scope.countries[size] = newCountry;
         }
-    ];
-
-    $scope.countries = countries;
+    };
 };
 
 
 module1.controller('myController', controller1);
+
+//var addCountry = function (inCountry) {
+//
+//    var newCountry = Document.getElementById(inCountry).value.trim();
+//    var length = countries.length;
+//
+//    if (newCountry !== '') {
+//
+//        countries[length] = newCountry;
+//    }
+//};
